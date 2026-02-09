@@ -39,7 +39,7 @@ A modern, full-stack task management application built with the PERN stack, feat
 
 ### 1. Clone Repository
 ```bash
-git clone https://github.com/yourusername/taskly.git
+git clone https://github.com/PrajaktaSarkhel/task_manager_PERN.git
 cd taskly
 ```
 
@@ -106,27 +106,42 @@ Visit `http://localhost:5173` 🎉
 ## 📁 Project Structure
 ```
 taskly/
-├── frontend/                # React application
+├── frontend/                # React + Vite Application
+│   ├── public/              # Static assets
 │   ├── src/
-│   │   ├── components/     # React components
-│   │   ├── context/        # Auth context
-│   │   └── utils/          # API utilities
+│   │   ├── assets/          # Images and Global CSS
+│   │   ├── components/      # UI Components (TaskItem, Navbar, etc.)
+│   │   ├── App.jsx          # Main App Logic & Auth State
+│   │   └── main.jsx         # Entry point
+│   ├── index.html
 │   └── package.json
 │
-├── backend/                # Express API
-│   ├── config/            # Database config
-│   ├── middleware/        # Auth middleware
-│   ├── routes/            # API routes
-│   └── package.json
+├── backend/                 # Express API
+│   ├── node_modules/
+│   ├── .env                 # Database & JWT Secrets 
+│   ├── index.js             # Server entry & API Routes
+│   └── package.json         # Backend Dependencies
 │
-└── README.md
+├── .gitignore           # Ignores .env and node_modules
+└── README.md                # Project Documentation
 ```
 
 ## 🔗 Links
 
 - **Frontend Live Demo:** [Your Deployed Frontend URL]
 - **Backend API:** [Your Deployed Backend URL]
-- **Repository:** [https://github.com/yourusername/taskly](https://github.com/yourusername/taskly)
+- **Repository:** [https://github.com/PrajaktaSarkhel/taskly](https://github.com/PrajaktaSarkhel/task_manager_PERN)
+
+## 📝 API Endpoints
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| `POST` | `/api/auth/register` | Create new account (Username, Email, Password) | No |
+| `POST` | `/api/auth/login` | Authenticate & receive JWT | No |
+| `GET` | `/api/tasks` | Fetch all user tasks | Yes (JWT) |
+| `POST` | `/api/tasks` | Create task (Title, Desc, Priority, Date) | Yes (JWT) |
+| `PUT` | `/api/tasks/:id` | Update status or details | Yes (JWT) |
+| `DELETE` | `/api/tasks/:id` | Remove a task | Yes (JWT) |
 
 ## 🛡 Security Features
 
@@ -160,11 +175,7 @@ taskly/
 
 This project is licensed under the MIT License.
 
-## 📧 Contact
-
-**Your Name** - your.email@example.com
-
-**Project Link:** [https://github.com/yourusername/taskly](https://github.com/yourusername/taskly)
+**Project Link:** [https://github.com/PrajaktaSarkhel/taskly](https://github.com/PrajaktaSarkhel/task_manager_PERN)
 
 ---
 
@@ -172,6 +183,6 @@ This project is licensed under the MIT License.
 
 ⭐ **Star this repo if you find it helpful!** ⭐
 
-Made with ❤️ by [Your Name](https://github.com/yourusername)
+Made with ❤️ by [Prajakta Sarkhel](https://github.com/PrajaktaSarkhel)
 
 </div>
